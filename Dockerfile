@@ -5,13 +5,13 @@ FROM python:3.12-slim
 WORKDIR /app
 
 # Copy only the requirements file to install dependencies first (for caching purposes)
-COPY imageAPI_docker/requirements.txt .
+COPY requirements.txt .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application files
-COPY imageAPI_docker/ .
+COPY . .
 
 # Expose the port FastAPI runs on
 EXPOSE 8000
