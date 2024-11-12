@@ -38,7 +38,7 @@ jobs:
         id: build-docker-image
         run: |
           ls -la 
-          docker build . -t christo66/api_seg:v1
+          docker build . -t christo66/api_seg:v2
       - name: push the docker image
         id: push-docker-image
-        run: docker push christo66/api_seg:v1
+        run: docker push christo66/api_seg:v2
